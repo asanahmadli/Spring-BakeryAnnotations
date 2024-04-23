@@ -1,8 +1,12 @@
 package com.zipcodewilmington.bakery.models;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.persistence.Entity;
 import java.util.Objects;
 
+@Entity
 public class Baker {
     private Long id;
 
@@ -12,13 +16,16 @@ public class Baker {
 
     private String specialty;
 
+    @Autowired
     public Baker() {
     }
 
+    @Autowired
     public Baker(String name, String employeeId, String specialty) {
         this(null, name, employeeId, specialty);
     }
 
+    @Autowired
     public Baker(Long id, String name, String employeeId, String specialty) {
         this.id = id;
         this.name = name;

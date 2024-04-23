@@ -1,16 +1,22 @@
 package com.zipcodewilmington.bakery.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.persistence.Entity;
 import java.util.Objects;
 
+@Entity
 public class Muffin {
 
     private Long id;
 
     private String flavor;
 
+    @Autowired
     public Muffin() {
     }
 
+    @Autowired
     public Muffin(String flavor) {
         this.flavor = flavor;
     }
