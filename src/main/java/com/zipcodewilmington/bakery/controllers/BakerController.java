@@ -20,7 +20,7 @@ public class BakerController {
     }
 
 
-    @GetMapping("/baker") //find all
+    @GetMapping("/bakers") //find all
     public ResponseEntity<Iterable<Baker>> index() {
         return new ResponseEntity<>(service.index(), HttpStatus.OK);
     }
@@ -30,7 +30,7 @@ public class BakerController {
         return new ResponseEntity<>(service.show(id), HttpStatus.OK);
     }
 
-    @PostMapping("/baker")
+    @PostMapping("/bakers")
     public ResponseEntity<Baker> create(@RequestBody Baker baker) {
         return new ResponseEntity<>(service.create(baker), HttpStatus.CREATED);
     }

@@ -17,7 +17,7 @@ public class MuffinController {
         this.service = service;
     }
 
-    @GetMapping("/muffin") //find all
+    @GetMapping("/muffins") //find all
     public ResponseEntity<Iterable<Muffin>> index() {
         return new ResponseEntity<>(service.index(), HttpStatus.OK);
     }
@@ -27,7 +27,7 @@ public class MuffinController {
         return new ResponseEntity<>(service.show(id), HttpStatus.OK);
     }
 
-    @PostMapping("/muffin")
+    @PostMapping("/muffins")
     public ResponseEntity<Muffin> create(@RequestBody Muffin baker) {
         return new ResponseEntity<>(service.create(baker), HttpStatus.CREATED);
     }
