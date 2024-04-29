@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class BakerController {
+    //define a private field for the dependency
+    //if you have one constructor dont need add autowired annotation
     private BakerService service;
 
+    //define a constructor for dependency injection
     @Autowired
     public BakerController(BakerService service) {
         this.service = service;

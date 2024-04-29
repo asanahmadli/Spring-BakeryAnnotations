@@ -8,9 +8,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MuffinService {
-    @Autowired
+
     private MuffinRepository repository;
 
+    @Autowired
     public MuffinService(MuffinRepository repository) {
         this.repository = repository;
     }
